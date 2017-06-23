@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic Tasks using Vue!</title>
+</head>
+<body>
+	
+	<!-- Say your first 'Hello World' in Vuejs -->
+
+	<div id="firstApp"><h4>{{ message }}</h4></div>
+	<br/>
+
+
+	<div id="newapp">
+	<!-- Output a list of items -->
+	  <h4>Listing a few Useful Python Libraries:</h4>
+	  <ol>
+	    <li v-for = "each in list"> {{ each.items }}
+	    </li>
+	  </ol>
+	<br/>  
+	  
+	  
+	<!-- Bind a message on hover -->
+	  <span v-bind:title="hovermsg">
+	    Hover your mouse over me for a few seconds
+	    to see my dynamically bound title!
+	  </span>
+	<br/>
+	<br/>
+	  
+	  
+	<!-- Handling a click event-->  
+	   <h4>Reverse Me:</h4>
+	   <p>{{ msg }}</p>
+	  <button v-on:click="doThisOnClick">Reverse</button>
+	<br/>  
+	<br/> 
+	  
+	  
+	<!-- Get ready for two way binding   -->
+	<h4>Two way Binding:</h4>  
+	<p>{{ text }}</p>
+	  <input v-model="text">
+	<br />
+	<br />
+	  
+	  
+	<!-- To-do list -->
+	  <h4>Vue components to build a To-do list:</h4>
+	  <ol>
+	    <to-do 
+	       v-for="each in todolist"
+	       v-bind:todo = "each"
+	       v-bind:key = "each.id">
+	    </to-do>
+	  </ol>
+	  
+	</div>
+
+
+
+	<script type="text/javascript" src="node_modules/vue/dist/vue.min.js
+	"></script>
+	<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
