@@ -1,0 +1,48 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <title> Binding to Attributes and Using Directives </title>
+        
+    </head>
+    <body>
+
+        <div id="exercise">
+          <!-- 1) Start the Effect with the Button. The Effect should alternate the "highlight" or "shrink" class on each new setInterval tick (attach respective class to the div with id "effect" below) -->
+          <div>
+            <button @click="highnow = !highnow, shrinknow = !shrinknow">Start Effect</button>
+            <div id="effect" :class="{highlight: highnow, shrink: shrinknow}"></div>
+          </div>
+          <!-- 2) Create a couple of CSS classes and attach them via the array syntax -->
+          <div>I got no class :(</div>
+          <!-- 3) Let the user enter a class (create some example classes) and attach it -->
+          <div>
+            <input type="text" v-model="usrentry">
+            <div :class="usrentry"></div>
+          </div>
+          <!-- 4) Let the user enter a class and enter true/ false for another class (create some example classes) and attach the classes -->
+          <div>
+            <input type="text" v-model="usrclass">
+            <input type="text" v-model="shrinknow">
+            <div :class="usrclass"></div>
+          </div>
+          <!-- 5) Repeat 3) but now with values for styles (instead of class names). Attach the respective styles.  -->
+          <div>
+            <input type="text" v-model="bgcolor">
+            <div :style="custom">abc</div>
+          </div>
+          <!-- 6) Create a simple progress bar with setInterval and style bindings. Start it by hitting the below button. -->
+          <br/>
+          <div>
+            <button v-on:click="startProgress">Start Progress</button>
+            <br/><br/>
+            <div :style="progbar"></div>
+          </div>
+        </div>
+
+        
+        <script type="text/javascript" src="E:/Project/Vue/Vue Projects/node_modules/vue/dist/vue.min.js
+    "></script>
+    <script type="text/javascript" src="DynamicStyling.js"></script>
+
+    </body>
+</html>
