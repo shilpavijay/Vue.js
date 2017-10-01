@@ -10,3 +10,5 @@ Coding with Vue.js
   2. [Using Events](/InteractWithDOM/Events.js)
   3. [Reactive Properties](/InteractWithDOM/ReactiveProperty.js)
   4. [Dynamic Styling](/InteractWithDOM/DynamicStyling.js)
+
+- [Using Conditionals and Rendering Lists](/ConditionalsLists/CondnAndLists.js)
