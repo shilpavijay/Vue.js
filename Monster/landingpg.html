@@ -47,7 +47,8 @@
     <section class="row log" v-if="turns.length > 0">
         <div class="small-12 columns">
             <ul>
-                <li v-for = "each in turns">
+                <li v-for = "each in turns"
+                    :class="{'player-turn': each.isPlayer, 'monster-turn': !each.isPlayer}">
                     {{ each.text }}
                 </li>
             </ul>
