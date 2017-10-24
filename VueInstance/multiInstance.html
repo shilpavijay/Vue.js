@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monster Slayer</title>
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="css/foundation.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+    <div id="app1">
+      <h3> {{ title }}</h3>
+      <button v-on:click="change" ref="myButton">OK</button>
+    </div>
+
+    <div id="app2">
+      <h3 ref="heading"> {{ title }}</h3>
+      <button v-on:click="change">Change</button>
+    </div>
+
+<script src="multiInstance.js"></script>
+</body>
+</html>
