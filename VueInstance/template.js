@@ -12,3 +12,7 @@ var app2 = new Vue({
 
 app2.$mount()
 document.getElementById('app2').appendChild(app2.$el)
+
+Vue.component('comp',{
+   template: '<p></p>'
+})
