@@ -4,7 +4,12 @@ Vue.component('my-comp',{
 		status: 'Critical'
 		}
 	},
-	template: '<p>Application status: {{ status }}</p>'
+	template: '<p>Application status: {{ status }} <button @click="changeStatus">Modify</button></p>',
+	methods: {
+		changeStatus: function() {
+		this.status = 'Normal';
+		}
+	}
 });
 
 new Vue({
