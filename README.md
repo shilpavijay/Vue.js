@@ -14,7 +14,7 @@ Coding with Vue.js
 - [Using Conditionals and Rendering Lists](/ConditionalsLists/CondnAndLists.js)
 - [Understanding the Vue Instance](/VueInstance/VueInstLifeCycle.js) 
 - [Vue Template and Component](/VueInstance/template.js)
-- [Web Pack and Vue CLI](/vue-cli)
+- [Webpack and Vue CLI](/vue-cli)
 
 - Mini-Projects:
 	- [The Monster Slayer Game](/Monster)
