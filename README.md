@@ -15,6 +15,7 @@ Coding with Vue.js
 - [Understanding the Vue Instance](/VueInstance/VueInstLifeCycle.js) 
 - [Vue Template and Component](/VueInstance/template.js)
 - [Webpack and Vue CLI](/vue-cli)
+- [Components](/Components)
 
 - Mini-Projects:
 	- [The Monster Slayer Game](/Monster)

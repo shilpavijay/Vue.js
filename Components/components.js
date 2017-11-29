@@ -1,4 +1,4 @@
-Vue.component('my-comp',{
+var comp = {
 	data: function() {
 		return {
 		status: 'Critical'
@@ -10,8 +10,11 @@ Vue.component('my-comp',{
 		this.status = 'Normal';
 		}
 	}
-});
+};
 
 new Vue({
-	el: '#app'
+	el: '#app',
+	components: {
+		'my-comp': comp
+	}
 })
