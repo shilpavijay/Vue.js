@@ -1,22 +1,15 @@
 <template>
 	<div>
-		<p>Application status: {{ status }}</p>
-		<br/>
-		<button @click="changeStatus">Change</button>
+		<app-server-status v-for="server in 5"></app-server-status>
 	</div>
 </template>
 
 <script>
+	import ServerStatus from './ServerStatus.vue';
+
 	export default {
-		data: function() {
-			return {
-				status: 'Critical'
-			}
-		},
-		methods: {
-			changeStatus() {
-				this.status = 'Normal'
-			}
+		components: {
+			'app-server-status' : ServerStatus
 		}
 	}
 </script>
