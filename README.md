@@ -16,6 +16,7 @@ Coding with Vue.js
 - [Vue Template and Component](/VueInstance/template.js)
 - [Webpack and Vue CLI](/vue-cli)
 - [Components](/Components)
+- [Communicating between Components](/communicate-components)
 
 - Mini-Projects:
 	- [The Monster Slayer Game](/Monster)
