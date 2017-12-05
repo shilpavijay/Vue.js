@@ -7,10 +7,18 @@
         <hr>
         <div class="row">
             <div class="col-xs-12 col-sm-6">
-                <app-user-detail :name='name' @nameReset="name = $event"></app-user-detail>
+                <app-user-detail 
+                    :name='name' 
+                    @nameReset="name = $event" 
+                    :age='age' 
+                    :agefn='changeage'
+                ></app-user-detail>
             </div>
             <div class="col-xs-12 col-sm-6">
-                <app-user-edit></app-user-edit>
+                <app-user-edit
+                    :userAge = 'age'
+                    @ageChanged="age = $event"
+                ></app-user-edit>
             </div>
         </div>
     </div>
@@ -23,12 +31,16 @@
     export default {
         data: function() {
             return {
-                name: 'Shilpa'
+                name: 'Shilpa',
+                 age: 12
             }
         },
         methods: {
             changename() {
                 this.name = 'Amberker'
+            },
+            changeage() {
+                this.age = 21
             }
         },
         components: {
