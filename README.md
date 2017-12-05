@@ -17,6 +17,7 @@ Coding with Vue.js
 - [Webpack and Vue CLI](/vue-cli)
 - [Components](/Components)
 - [Communicating between Components](/communicate-components)
+- [Advanced components usage](/adv-comp)
 
 - Mini-Projects:
 	- [The Monster Slayer Game](/Monster)
