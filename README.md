@@ -19,6 +19,9 @@ Coding with Vue.js
 - [Communicating between Components](/communicate-components)
 - [Advanced components usage](/adv-comp)
    1. [Slot & Using Multiple Slots](/adv-comp/Quote.vue)
+   2. [Dynamic Components](/adv-comp/App.vue)
+   3. [Keep Alive!](/adv-comp/App.vue)
+   4. [Component Lifecycle - Destroyed, Deactivated and Activated](/adv-comp/New.vue)
 
 - Mini-Projects:
 	- [The Monster Slayer Game](/Monster)
