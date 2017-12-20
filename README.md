@@ -18,7 +18,7 @@ Coding with Vue.js
 - [Components](/Components)
 - [Communicating between Components](/communicate-components)
 - [Advanced components usage](/adv-comp)
-   1. [Slot](/adv-comp/Quote.vue)
+   1. [Slot & Using Multiple Slots](/adv-comp/Quote.vue)
 
 - Mini-Projects:
 	- [The Monster Slayer Game](/Monster)
