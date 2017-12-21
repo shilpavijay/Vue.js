@@ -26,3 +26,4 @@ Coding with Vue.js
 - Mini-Projects:
 	- [The Monster Slayer Game](/Monster)
 	- [Server Status](/server-status)
+	- [Build your Quotes](/quotes)
