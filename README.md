@@ -22,6 +22,7 @@ Coding with Vue.js
    2. [Dynamic Components](/adv-comp/App.vue)
    3. [Keep Alive!](/adv-comp/App.vue)
    4. [Component Lifecycle - Destroyed, Deactivated and Activated](/adv-comp/New.vue)
+- [Forms](/forms)
 
 - Mini-Projects:
 	- [The Monster Slayer Game](/Monster)
