@@ -23,7 +23,7 @@ Coding with Vue.js
    3. [Keep Alive!](/adv-comp/App.vue)
    4. [Component Lifecycle - Destroyed, Deactivated and Activated](/adv-comp/New.vue)
 - [Forms](/forms)
-- [Directives]
+- [Directives](/directives)
 
 - Mini-Projects:
 	- [The Monster Slayer Game](/Monster)
