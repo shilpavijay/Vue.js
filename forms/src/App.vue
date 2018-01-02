@@ -1,104 +1,76 @@
 <template>
     <div class="container">
-        <form>
+        <form v-if="!isSubmitted">
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-                    <h1>File a Complaint</h1>
+                    <!-- Exercise 1 -->
+                    <!-- Create a Signup Form where you retrieve the following Information -->
+                    <!-- Full Name (First Name + Last Name) -->
+                    <!-- Mail -->
+                    <!-- Password -->
+                    <!-- Store Data? Yes/No -->
+                    <h1>Sign-up Form</h1>
                     <hr>
                     <div class="form-group">
-                        <label for="email">Mail</label>
-                        <input
-                                type="text"
-                                id="email"
-                                class="form-control"
-                                v-model.trim="userData.email">
+                      <label for="firstName">First Name</label>
+                      <input type="text"
+                              id="firstName"
+                              class="form-control"
+                              v-model="name.firstName">
                     </div>
                     <div class="form-group">
-                        <label for="password">Password</label>
-                        <input
-                                type="password"
-                                id="password"
-                                class="form-control"
-                                v-model.lazy.password="userData.pwd">
+                      <label for="lastName">Last Name</label>
+                      <input type="text"
+                              id="lastName"
+                              class="form-control"
+                              v-model="name.lastName">
                     </div>
                     <div class="form-group">
-                        <label for="age">Age</label>
-                        <input
-                                type="number"
-                                id="age"
-                                class="form-control"
-                                v-model.number="userData.age">
+                      <label for="mail">E-mail</label>
+                      <input type="text"
+                              id="mail"
+                              class="form-control"
+                              v-model="email">
                     </div>
-
+                    <div class="form-group">
+                      <label for="password">Password</label>
+                      <input type="text"
+                              id="password"
+                              class="form-control"
+                              v-model="password">
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-group">
-                    <label for="message">Message</label><br>
-                    <!-- Interpolation between <textarea>{{ test }}</textarea> doesn't work!-->
-                    <textarea
-                            id="message"
-                            rows="5"
-                            class="form-control"
-                            v-model="message"></textarea>
+                    <label for="storeData">
+                        <input
+                                type="radio"
+                                id="store"
+                                value="yes"
+                                v-model="storeData"> Yes
+                    </label>
+                    <label for="doNotStoreData">
+                        <input
+                                type="radio"
+                                id="doNotStore"
+                                value="no"
+                                v-model="storeData"> No
+                    </label>
                 </div>
             </div>
+                    <!-- Exercise 2 -->
+                    <!-- Only display the Form if it has NOT been submitted -->
+                    <!-- Display the Data Summary ONCE the Form HAS been submitted -->
+            
+                    <!-- Exercise 3 -->
+                    <!-- Edit the Example from above and create a custom "Full Name" Control -->
+                    <!-- which still holds the First Name and Last Name Input Field -->
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-                    <div class="form-group">
-                        <label for="sendmail">
-                            <input
-                                    type="checkbox"
-                                    id="sendmail"
-                                    value="SendMail"
-                                    v-model="sendMail"> Send Mail
-                        </label>
-                        <label for="sendInfomail">
-                            <input
-                                    type="checkbox"
-                                    id="sendInfomail"
-                                    value="SendInfoMail"
-                                    v-model="sendMail"> Send Infomail
-                        </label>
-                    </div>
-
+                  <!-- <app-fullname></app-fullname> -->
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-group">
-                    <label for="male">
-                        <input
-                                type="radio"
-                                id="male"
-                                value="Male"
-                                v-model="gender"> Male
-                    </label>
-                    <label for="female">
-                        <input
-                                type="radio"
-                                id="female"
-                                value="Female"
-                                v-model="gender"> Female
-                    </label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 from-group">
-                    <label for="priority">Priority</label>
-                    <select
-                            id="priority"
-                            class="form-control"
-                            v-model="selectedPriority">
-                        <option 
-                          v-for="priority in priorities"
-                          :selected="priority == 'Low'">{{ priority }}</option>
-                    </select>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 from-group">
-              <app-switch v-model="dataSwitch"></app-switch>
-            </div>  
-            <hr>
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                     <button
@@ -116,17 +88,10 @@
                         <h4>Your Data</h4>
                     </div>
                     <div class="panel-body">
-                        <p>Mail: {{ userData.email }}</p>
-                        <p>Password:{{ userData.pwd }}</p>
-                        <p>Age:{{ userData.age }}</p>
-                        <p style="white-space: pre">Message: {{ message }}</p>
-                        <p><strong>Send Mail?</strong></p>
-                        <ul>
-                            <li v-for="item in sendMail">{{ item }}</li>
-                        </ul>
-                        <p>Gender:{{ gender }}</p>
-                        <p>Priority:{{ selectedPriority }}</p>
-                        <p>Switched:{{ dataSwitch }}</p>
+                        <p>Full Name: {{ name.firstName + ' ' + name.lastName}}</p>
+                        <p>Mail: {{ email }}</p>
+                        <p>Password: {{ password }}</p>
+                        <p>Store in Database?: {{ storeData }}</p>
                     </div>
                 </div>
             </div>
@@ -136,36 +101,30 @@
 
 <script>
 
-    import Switch from './Switch.vue'
-
+    import Fullname from './Fullname.vue'
     export default {
-      data () {
+      data() {
         return {
-          userData: {
-            email: '',
-              pwd: '',
-              age: 20
+          name: {
+            firstName: '',
+            lastName: ''
           },
-          message: "Enter your message here.",
-          sendMail: [],
-          gender: 'Female',
-          selectedPriority: '',
-          priorities: ['High','Medium','Low'],
-          dataSwitch: true,
+          email: '',
+          password: '',
+          storeData: 'yes',
           isSubmitted: false
         }
       },
       methods: {
         submitted() {
-          this.isSubmitted=true;
-        }
+          this.isSubmitted = true
+        }     
       },
       components: {
-        appSwitch: Switch
+        appFullname: Fullname
       }
     }
 </script>
 
 <style>
-
 </style>
