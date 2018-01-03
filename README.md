@@ -24,6 +24,7 @@ Coding with Vue.js
    4. [Component Lifecycle - Destroyed, Deactivated and Activated](/adv-comp/New.vue)
 - [Forms](/forms)
 - [Directives](/directives)
+- [Filters and Mixins](/filters)
 
 - Mini-Projects:
 	- [The Monster Slayer Game](/Monster)
