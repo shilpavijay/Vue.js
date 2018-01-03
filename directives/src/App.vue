@@ -14,6 +14,16 @@
                 <p v-local-highlight:background.delayed.blink="{mainColor:'grey', secondColor: 'green', delay: 1000}">Color this too!</p>
             </div>
         </div>
+		<div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                <h1>My v-on Directives</h1>
+                <button 
+                v-customOn:click="clicked" 
+                v-customOn:mouseover="mouseOver"
+                v-customOn:mouseout ="mouseOut"
+                class="btn btn-primary">Show Text</button>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -54,6 +64,25 @@
 					}
 					
     			}
+    		},
+
+		'customOn': {
+    		bind(el,binding) {
+    			const event = binding.arg;
+    			const func = binding.value;
+    			el.addEventListener(event, func);
+    		}		
+		}
+    	},  	
+    	methods: {
+    		clicked() {
+    			alert('Button clicked!')
+    		},
+    		mouseOver() {
+    			console.log('Cursor is on the button');
+    		},
+    		mouseOut() {
+    			console.log('Cursor left the button')
     		}
     	}
     }
