@@ -3,7 +3,14 @@ import App from './App.vue'
 
 Vue.filter('to-lowerCase', function(value) {
 	return value.toLowerCase();
-})
+});
+
+Vue.mixin({
+	created() {
+		console.log('Global Mixin - Created')
+	}
+});
+
 
 new Vue({
   el: '#app',
