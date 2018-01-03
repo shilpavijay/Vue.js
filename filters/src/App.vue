@@ -12,34 +12,35 @@
             <ul>
               <li v-for="v in filteredVeg">{{ v }}</li>
             </ul>  
+            <hr>
+             <app-list></app-list>
         </div>
-
     </div>
-  </div>         
+  </div>      
+
 </template>
 
 <script>
+import List from './List.vue';
+import { vegMixin } from './vegMixin';
+
 export default {
+    mixins: [vegMixin],
     data() {
         return {
-         text: "Hello World!!!",
-         veg: ['carrot','cabbage','brinjal','avocado','broccoli'],
-         filterText: ''
+         text: "Hello World!!!"
        }
-      },
-      computed: {
-        filteredVeg() {
-          return this.veg.filter((element) => {
-            return element.match(this.filterText);
-          });
-        }
       },
       filters: {
         'toUpperCase'(value) {
           return value.toUpperCase();
         }
+      },
+      components: {
+        appList: List
       }
     }
+    
 </script>
 
 <style>
