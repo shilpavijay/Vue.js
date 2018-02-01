@@ -5,11 +5,16 @@ Vue.filter('to-lowerCase', function(value) {
 	return value.toLowerCase();
 });
 
+Vue.filter('countLen', function(value) {
+	return value + ' (' + value.length + ')' ;
+});
+
 Vue.mixin({
 	created() {
 		console.log('Global Mixin - Created')
 	}
 });
+
 
 
 new Vue({
