@@ -6,10 +6,19 @@
                 <br/><br/>
                 <button class="btn btn-primary" @click="show=!show">Show Alert</button>
                 <br/><br/>
-                <transition name="fade">
+
+                <select class="form-control" v-model="selectAnimation">
+                    <option value="fade">Fade</option>
+                    <option value="slide">Slide</option>
+                </select>
+
+                <transition :name="selectAnimation">
                     <div class="alert alert-info" v-if="show">Some info goes here</div>
                 </transition>
-                <transition name="slide">
+                <transition                 
+                    enter-active-class="animated bounce"
+                    leave-active-class="animated wobble"
+                    >
                     <div class="alert alert-info" v-if="show">Some info goes here</div>
                 </transition>
                 
@@ -22,7 +31,8 @@
     export default {
         data() {
             return {
-                show: false
+                show: false,
+                selectAnimation: "fade"
             }
         }
     }
@@ -52,6 +62,7 @@
 
     .slice-enter-active {
         animation: slide-in 1s ease-out forwards;
+        transition: opacity 0.5s;
     }
 
     .slide-leave {
@@ -60,6 +71,8 @@
 
     .slide-leave-active {
         animation: slide-out 1s ease-out forwards;
+        transition: opacity 1s;
+        opacity: 0;
     }
 
     @keyframes slide-in {
